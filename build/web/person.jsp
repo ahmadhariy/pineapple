@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <link href="css/add_style.css" rel="stylesheet" type="text/css" />
+    <link href="css/addedit_style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
     <script lang="javascript">
         $(function test() {
