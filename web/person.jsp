@@ -14,7 +14,8 @@
     <body>
     <div id="wrapper">
     <div class="bar-userid"><p>user id</p></div>
-            <div class="pass-icon"><p>password</p></div>
+            <div class="bar-username"><p>username</p></div>
+            
         <div class="header">
 
             <span class="left">

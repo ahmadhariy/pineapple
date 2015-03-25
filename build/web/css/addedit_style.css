@@ -131,7 +131,7 @@ body {
     -ms-transition: all 0.5s;
 }
 
-.bar-userid, .pass-icon {
+.bar-userid, .bar-username {
     width: 100px;
     height: 47px;
     display: block;
@@ -147,19 +147,21 @@ body {
 }
 
 .bar-userid {
-    top:147px;
+    top:147px;	
+}
+
+
+.bar-username {
+    top:200px;
+}
+
+.bar-userid, .bar-username {
+	height:35px;
 	left:300px;
-	height:35px; /* Positioning fix for slide-in, got lazy to think up of simpler method. */
-    background: rgba(65,72,72,0.75);	
+	background: rgba(65,72,72,0.75);
 }
 
-
-.pass-icon {
-    top:221px;
-    background: rgba(65,72,72,0.75);
-}
-
-.bar-userid p, .pass-icon p {
+.bar-userid p, .bar-username p {
 	font-family: 'Bree Serif', serif;
 	color:white;
 	margin-top:5px;
