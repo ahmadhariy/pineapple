@@ -4,6 +4,7 @@
  */
 package com.hariy.model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -12,16 +13,10 @@ import java.util.Date;
  */
 public class Member {
 
-    private int userid;
-    private String username;
-    private String password;
-    private String firstname;
-    private String lastname;
+    private int userid, accbank;
+    private String username, password, firstname, lastname, search, type;
     private Date birthdate;
-    private int accbank;
     private Double salary;
-    private String search;
-    private String type;
 
     /**
      * @return the userid
@@ -162,4 +157,5 @@ public class Member {
     public void setSalary(Double salary) {
         this.salary = salary;
     }
+
 }

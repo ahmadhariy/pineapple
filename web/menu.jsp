@@ -18,6 +18,9 @@
 
             window.open("Home", "_blank", "scrollbars=1,resizable=1,height=500,width=700");
         }
+
+
+
     </script>
     <body>
         <div class="header">
@@ -36,8 +39,8 @@
             <h1>Welcome</h1>
             <span>Welcome to Member Maintenance system. To process all the system, click button below.</span>
             <form action="Home" class="home">
-                    <input type="submit" value="Process" class="button"/>
-                    </form>
+                <input type="submit" value="Process" class="button"/>
+            </form>
         </div>
     </center>
 

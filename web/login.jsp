@@ -7,44 +7,24 @@
 
         <link href="css/login_style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-        <script>
-            function check() {
-
-                var username = document.forms["login"]["username"].value;
-                var password = document.forms["login"]["password"].value;
-                if (username === null || username === "" || username === "Username") {
-                    alert("Username must be filled out");
-                    return false;
-                } else if (password === null || password === "" || password === "Password") {
-                    alert("Password must be filled out");
-                    return false;
-                }
-
-
-            }
-
-            $(document).ready(function () {
-                $(".username").focus(function () {
-                    $(".user-icon").css("left", "-48px");
-                });
-                $(".username").blur(function () {
-                    $(".user-icon").css("left", "0px");
-                });
-
-                $(".password").focus(function () {
-                    $(".pass-icon").css("left", "-48px");
-                });
-                $(".password").blur(function () {
-                    $(".pass-icon").css("left", "0px");
-                });
-            });
+        <script src="javascript/login.js"></script>
+        
+        <%
+            String err = (String) request.getAttribute("err");
+            if (err != null) {
+        %>
+        <script type="text/javascript">
+            alert('<%=err%>');
         </script>
+        <%
+            }
+        %>
     </head>
     <body>
         <div id="wrapper">
             <div class="user-icon"></div>
             <div class="pass-icon"></div>
-            <form method="post" name="login" class="login" action="Login" onsubmit="check()">
+            <form method="post" name="login" class="login" action="Login">
                 <div class="header">
                     <h1>Login</h1>
                     <span>Please login first to access the Member Maintenance.</span>
@@ -54,7 +34,7 @@
                     <input type="password" name="password" class="input password" id="password" value="Password" onfocus="this.value = ''"/>
                 </div>
                 <div class="footer">
-                    <input type="submit" value="Login" name="login" class="button"/>
+                    <input type="submit" value="Login" name="login" class="button" onclick="return check()"/>
                 </div>
             </form>
         </div>

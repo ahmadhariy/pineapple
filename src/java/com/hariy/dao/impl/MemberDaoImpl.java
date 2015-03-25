@@ -43,7 +43,7 @@ public class MemberDaoImpl implements MemberDao {
         ResultSet rs = null;
         try {
             stmt = connection.createStatement();
-            rs = stmt.executeQuery("select * from table_member");
+            rs = stmt.executeQuery("select * from table_member order by userid asc");
             while (rs.next()) {
                 Member person = new Member();
                 person.setUserid(rs.getInt("userid"));
@@ -91,7 +91,7 @@ public class MemberDaoImpl implements MemberDao {
         ResultSet rs = null;
         try {
             stmt = connection.createStatement();
-            rs = stmt.executeQuery("select * from table_member where userid::text like '%" + username + "%' ");
+            rs = stmt.executeQuery("select * from table_member where userid::text like '%" + username + "%' order by userid asc");
             while (rs.next()) {
                 Member person = new Member();
                 person.setUserid(rs.getInt("userid"));
@@ -139,7 +139,7 @@ public class MemberDaoImpl implements MemberDao {
         ResultSet rs = null;
         try {
             stmt = connection.createStatement();
-            rs = stmt.executeQuery("select * from table_member where username like '%" + username + "%' ");
+            rs = stmt.executeQuery("select * from table_member where username like '%" + username + "%' order by userid asc");
             while (rs.next()) {
                 Member person = new Member();
                 person.setUserid(rs.getInt("userid"));
@@ -341,10 +341,10 @@ public class MemberDaoImpl implements MemberDao {
         Member person = new Member();
         person.setUserid(getLastNo());
         person.setType("insert");
-        person.setUsername("");
-        person.setPassword("");
-        person.setFirstname("");
-        person.setLastname("");
+        person.setUsername("Username");
+        person.setPassword("Password");
+        person.setFirstname("First Name");
+        person.setLastname("Last Name");
         //person.setBirthdate(null);
 
         String x = "YYYY-MM-DD";
@@ -357,8 +357,8 @@ public class MemberDaoImpl implements MemberDao {
             Logger.getLogger(MemberDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        person.setAccbank(0);
-        person.setSalary(0.0);
+        person.setAccbank(Integer.parseInt("0"));
+        person.setSalary(Double.parseDouble("0"));
 
         return person;
     }

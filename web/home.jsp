@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList" %>
 <%@page import="com.hariy.model.*" %>
@@ -52,6 +53,7 @@
                 </tr>
                 </thead>
                 <%
+                    DecimalFormat df = new DecimalFormat("'Rp.'###,###,###.00");
                     ArrayList<Member> listMember = (ArrayList<Member>) request.getAttribute("listPerson");
 
                     for (int i = 0; i < listMember.size(); i++) {
@@ -65,7 +67,7 @@
                     <td><%= listMember.get(i).getLastname()%></td>
                     <td><%= listMember.get(i).getBirthdate()%></td>
                     <td><%= listMember.get(i).getAccbank()%></td>
-                    <td><%= listMember.get(i).getSalary()%></td>
+                    <td><%= df.format(listMember.get(i).getSalary())%></td>
                     <td><a href="Member?act=edit&no=<%= listMember.get(i).getUserid()%>">Edit</a></td>
                     <td><a href="Member?act=delete&no=<%= listMember.get(i).getUserid()%>">Delete</a></td>
                 </tr>

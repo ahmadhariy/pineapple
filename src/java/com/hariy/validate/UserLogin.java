@@ -76,7 +76,7 @@ public class UserLogin extends HttpServlet {
         if (login(username, password)) {
             HttpSession session = request.getSession();
             session.setAttribute("login", username);
-            PrintWriter out = response.getWriter();
+            //PrintWriter out = response.getWriter();
             //out.println("Counter: " + this.tes);
             Integer hitCount = (Integer) getServletContext().getAttribute("counter");
 
@@ -91,9 +91,11 @@ public class UserLogin extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("menu.jsp");
             rd.include(request, response);
         } else {
-            PrintWriter out = response.getWriter();
-            out.println("<html><body onload=\"alert('Incorrect username and password!!')\"></body></html>");
+            String alert = "Username and Password is not match..!";
+            request.setAttribute("err", alert);
 
+            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+            rd.include(request, response);
         }
     }
 }

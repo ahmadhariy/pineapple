@@ -21,12 +21,13 @@ public class UserLogout extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
+        String alert = "Successfully Logout..!";
+        request.setAttribute("err", alert);
         RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
         rd.include(request, response);
         HttpSession session = request.getSession();
         session.invalidate();
 
-        out.println("You are successfully logged out!");
+        
     }
 }

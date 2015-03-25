@@ -20,6 +20,10 @@
         <servlet-name>Counter</servlet-name>
         <servlet-class>com.hariy.validate.Counter</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PagginationServlet</servlet-name>
+        <servlet-class>com.hariy.pagination.PagginationServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/Home</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>UserLogout</servlet-name>
         <url-pattern>/UserLogout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PagginationServlet</servlet-name>
+        <url-pattern>/PagginationServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
