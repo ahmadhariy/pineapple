@@ -24,18 +24,20 @@ function preventBack() {
     window.history.forward();
 }
 setTimeout("preventBack()", 0);
-window.onunload = function () {null};
+window.onunload = function () {
+    null
+};
 
 $(document).ready(function () {
     $(".username").focus(function () {
-        $(".user-icon").css("left", "-48px");
+        $(".user-icon").css("left", "-100px");
     });
     $(".username").blur(function () {
         $(".user-icon").css("left", "0px");
     });
 
     $(".password").focus(function () {
-        $(".pass-icon").css("left", "-48px");
+        $(".pass-icon").css("left", "-100px");
     });
     $(".password").blur(function () {
         $(".pass-icon").css("left", "0px");

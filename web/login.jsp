@@ -8,6 +8,7 @@
         <link href="css/login_style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
         <script src="javascript/login.js"></script>
+  </script>
         
         <%
             String err = (String) request.getAttribute("err");
@@ -22,8 +23,8 @@
     </head>
     <body>
         <div id="wrapper">
-            <div class="user-icon"></div>
-            <div class="pass-icon"></div>
+            <div class="user-icon"><p>username</p></div>
+            <div class="pass-icon"><p>password</p></div>
             <form method="post" name="login" class="login" action="Login">
                 <div class="header">
                     <h1>Login</h1>

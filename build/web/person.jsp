@@ -12,6 +12,9 @@
 
 
     <body>
+    <div id="wrapper">
+    <div class="bar-userid"><p>user id</p></div>
+            <div class="pass-icon"><p>password</p></div>
         <div class="header">
 
             <span class="left">
@@ -40,6 +43,7 @@
                 <input type="text" name="salary" class="input salary" id="salary" value="<%= person.getSalary()%>" onfocus="this.value = ''">
                 <input type="submit" value="Save" class="button" onclick="return check()"/>
             </form>
+        </div>
         </div>
     </body>
 </html>

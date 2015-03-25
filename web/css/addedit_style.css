@@ -44,6 +44,13 @@ body {
     text-decoration: none;
 }
 
+#wrapper {
+    /* Center wrapper perfectly */
+    width: 300px;
+    height: 400px;
+    position: absolute;
+}
+
 .left {
     font-family: 'Bree Serif', serif;
     font-weight: 300;
@@ -124,11 +131,47 @@ body {
     -ms-transition: all 0.5s;
 }
 
+.bar-userid, .pass-icon {
+    width: 100px;
+    height: 47px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    padding-right: 2px;
+    z-index: 3;
+
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+
+.bar-userid {
+    top:147px;
+	left:300px;
+	height:35px; /* Positioning fix for slide-in, got lazy to think up of simpler method. */
+    background: rgba(65,72,72,0.75);	
+}
+
+
+.pass-icon {
+    top:221px;
+    background: rgba(65,72,72,0.75);
+}
+
+.bar-userid p, .pass-icon p {
+	font-family: 'Bree Serif', serif;
+	color:white;
+	margin-top:5px;
+	margin-left:10px;
+}
+
 .content {
     width: 300px;
 	height: 510px;
     margin: 0 auto;
     margin-top: 30px;
+	left:110%;
     position: relative;
     z-index:5;
 	padding: 20px 30px 30px 30px;
