@@ -131,7 +131,7 @@ body {
     -ms-transition: all 0.5s;
 }
 
-.bar-userid, .bar-username {
+.bar-userid, .bar-username, .bar-firstname {
     width: 100px;
     height: 47px;
     display: block;
@@ -155,13 +155,17 @@ body {
     top:200px;
 }
 
-.bar-userid, .bar-username {
+.bar-firstname {
+	top:253px;
+}
+
+.bar-userid, .bar-username, .bar-firstname {
 	height:35px;
 	left:300px;
 	background: rgba(65,72,72,0.75);
 }
 
-.bar-userid p, .bar-username p {
+.bar-userid p, .bar-username p, .bar-firstname p {
 	font-family: 'Bree Serif', serif;
 	color:white;
 	margin-top:5px;
