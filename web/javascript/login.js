@@ -10,10 +10,10 @@ function check() {
     var username = document.forms["login"]["username"].value;
     var password = document.forms["login"]["password"].value;
     if (username === null || username === "" || username === "Username") {
-        alert("Username must be filled out");
+		sweetAlert("Oops...", "Are you forget to type your username?", "error");
         return false;
     } else if (password === null || password === "" || password === "Password") {
-        alert("Password must be filled out");
+        sweetAlert("Oops...", "Are you forget to type your password?", "error");
         return false;
     }
 
@@ -43,3 +43,4 @@ $(document).ready(function () {
         $(".pass-icon").css("left", "0px");
     });
 });
+

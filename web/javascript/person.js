@@ -10,25 +10,31 @@ function check() {
     var accbank = document.forms["member"]["accbank"].value;
     var salary = document.forms["member"]["salary"].value;
     if (username === null || username === "" || username === "Username") {
-        alert("Username must be filled out");
+        sweetAlert("Oops...", "Are you forget to type your username?", "error");
         return false;
     } else if (password === null || password === "" || password === "Password") {
-        alert("Password must be filled out");
+        sweetAlert("Oops...", "Are you forget to type your password?", "error");
         return false;
     } else if (firstname === null || firstname === "" || firstname === "First Name") {
-        alert("First name must be filled out");
+        sweetAlert("Oops...", "Are you forget to type your first name?", "error");
         return false;
     } else if (lastname === null || lastname === "" || lastname === "Last Name") {
-        alert("Last name must be filled out");
+        sweetAlert("Oops...", "Are you forget to type your last name?", "error");
         return false;
     } else if (birthdate === null || birthdate === "" || birthdate === "mm/dd/yyyy") {
-        alert("Birth date must be filled out");
+        sweetAlert("Oops...", "Are you forget to type your birth date?", "error");
         return false;
     } else if (accbank === null || accbank === "" || accbank === "0") {
-        alert("Account bank must be filled out");
+        sweetAlert("Oops...", "Are you forget to type your account bank?", "error");
+        return false;
+    } else if (accbank < 0) {
+        sweetAlert("Attention..!", "Negative account bank is not allowed here..!", "error");
         return false;
     } else if (salary === null || salary === "" || salary === "0.0") {
-        alert("Salary must be filled out");
+        sweetAlert("Oops...", "Are you forget to type your salary?", "error");
+        return false;
+    } else if (salary < 0) {
+        sweetAlert("Attention..!", "Negative salary is not allowed here..!", "error");
         return false;
     }
 

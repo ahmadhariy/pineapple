@@ -9,6 +9,9 @@
     <link href="css/addedit_style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
     <script src="javascript/person.js"></script>
+    <script src="javascript/sweet-alert.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/sweet-alert.css">
+            </script>
 
 
     <body>
@@ -45,8 +48,8 @@
                 <input type="text" name="firstname" class="input firstname" id="firstname" value="<%= person.getFirstname()%>" onfocus="this.value = ''">
                 <input type="text" name="lastname" class="input lastname" id="lastname" value="<%= person.getLastname()%>" onfocus="this.value = ''">
                 <input type="date" name="birthdate" class="input birthdate" id="birthdate" value="<%= person.getBirthdate()%>" onfocus="this.value = ''">
-                <input type="text" name="accbank" class="input accbank" id="accbank" value="<%= person.getAccbank()%>" onfocus="this.value = ''">
-                <input type="text" name="salary" class="input salary" id="salary" value="<%= person.getSalary()%>" onfocus="this.value = ''">
+                <input name="accbank" type="text" class="input accbank" id="accbank" onfocus="this.value = ''" value="<%= person.getAccbank()%>">
+<input type="text" name="salary" class="input salary" id="salary" value="<%= person.getSalary()%>" onfocus="this.value = ''">
                 <input type="submit" value="Save" class="button" onclick="return check()"/>
             </form>
         </div>

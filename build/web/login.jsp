@@ -8,18 +8,20 @@
         <link href="css/login_style.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
         <script src="javascript/login.js"></script>
-  </script>
-        
-        <%
-            String err = (String) request.getAttribute("err");
-            if (err != null) {
-        %>
-        <script type="text/javascript">
-            alert('<%=err%>');
-        </script>
-        <%
-            }
-        %>
+        <script src="javascript/sweet-alert.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/sweet-alert.css">
+            </script>
+
+            <%
+                String err = (String) request.getAttribute("err");
+                if (err != null) {
+            %>
+            <script type="text/javascript">
+                alert("<%=err%>");
+            </script>
+            <%
+                }
+            %>
     </head>
     <body>
         <div id="wrapper">
