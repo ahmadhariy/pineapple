@@ -123,7 +123,7 @@ body {
     -webkit-box-shadow: inset 0 1px 6px rgba(256,256,256,0.75);
 }
 
-.button {
+.button, .bar-userid, .bar-username, .bar-password, .bar-firstname, .bar-lastname, .bar-birthdate, .bar-accbank, .bar-salary{
     transition: all 0.5s;
     -moz-transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -131,7 +131,7 @@ body {
     -ms-transition: all 0.5s;
 }
 
-.bar-userid, .bar-username, .bar-firstname {
+.bar-userid, .bar-username, .bar-password, .bar-firstname, .bar-lastname, .bar-birthdate, .bar-accbank, .bar-salary{
     width: 100px;
     height: 47px;
     display: block;
@@ -147,25 +147,44 @@ body {
 }
 
 .bar-userid {
-    top:147px;	
+    top:150px;	
 }
 
-
 .bar-username {
-    top:200px;
+    top:202px;
+}
+
+.bar-password {
+	top:255px;
 }
 
 .bar-firstname {
-	top:253px;
+	top:308px;
 }
 
-.bar-userid, .bar-username, .bar-firstname {
+.bar-lastname {
+	top:361px;
+}
+
+.bar-birthdate {
+	top:414px;
+}
+
+.bar-accbank {
+	top:467px;
+}
+
+.bar-salary {
+	top:520px;
+}
+
+.bar-userid, .bar-username, .bar-password, .bar-firstname, .bar-lastname, .bar-birthdate, .bar-accbank, .bar-salary{
 	height:35px;
-	left:300px;
+	margin-left:330px;
 	background: rgba(65,72,72,0.75);
 }
 
-.bar-userid p, .bar-username p, .bar-firstname p {
+.bar-userid p, .bar-username p, .bar-password p, .bar-firstname p, .bar-lastname p, .bar-birthdate p, .bar-accbank p, .bar-salary p {
 	font-family: 'Bree Serif', serif;
 	color:white;
 	margin-top:5px;

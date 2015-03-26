@@ -78,3 +78,61 @@ $(function test() {
     }
     return false;
 });
+
+$(document).ready(function () {
+    $(".userid").focus(function () {
+        $(".bar-userid").css("left", "-100px");
+    });
+    $(".userid").blur(function () {
+        $(".bar-userid").css("left", "0px");
+    });
+
+    $(".username").focus(function () {
+        $(".bar-username").css("left", "-100px");
+    });
+    $(".username").blur(function () {
+        $(".bar-username").css("left", "0px");
+    });
+	
+	$(".password").focus(function () {
+        $(".bar-password").css("left", "-100px");
+    });
+    $(".password").blur(function () {
+        $(".bar-password").css("left", "0px");
+    });
+	
+	$(".firstname").focus(function () {
+        $(".bar-firstname").css("left", "-100px");
+    });
+    $(".firstname").blur(function () {
+        $(".bar-firstname").css("left", "0px");
+    });
+	
+	$(".lastname").focus(function () {
+        $(".bar-lastname").css("left", "-100px");
+    });
+    $(".lastname").blur(function () {
+        $(".bar-lastname").css("left", "0px");
+    });
+	
+	$(".birthdate").focus(function () {
+        $(".bar-birthdate").css("left", "-100px");
+    });
+    $(".birthdate").blur(function () {
+        $(".bar-birthdate").css("left", "0px");
+    });
+	
+	$(".accbank").focus(function () {
+        $(".bar-accbank").css("left", "-100px");
+    });
+    $(".accbank").blur(function () {
+        $(".bar-accbank").css("left", "0px");
+    });
+	
+	$(".salary").focus(function () {
+        $(".bar-salary").css("left", "-100px");
+    });
+    $(".salary").blur(function () {
+        $(".bar-salary").css("left", "0px");
+    });
+});

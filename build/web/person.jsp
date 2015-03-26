@@ -15,7 +15,12 @@
     <div id="wrapper">
     <div class="bar-userid"><p>user id</p></div>
             <div class="bar-username"><p>username</p></div>
+            <div class="bar-password"><p>password</p></div>
             <div class="bar-firstname"><p>first name</p></div>
+            <div class="bar-lastname"><p>last name</p></div>
+            <div class="bar-birthdate"><p>birth date</p></div>
+            <div class="bar-accbank"><p>acc. bank</p></div>
+            <div class="bar-salary"><p>salary</p></div>
         <div class="header">
 
             <span class="left">
