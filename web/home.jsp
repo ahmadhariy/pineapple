@@ -6,40 +6,30 @@
 <html>
     <head>
         <!aasfasgasgsfasfaf->
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Member Maintenance</title>
-    </head>
-    <link href="css/home_style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
-    <script language="javascript">
-        function addRecord() {
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Member Maintenance</title>
+</head>
+<link href="css/home_style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script src="javascript/home.js"></script>
+<script src="javascript/sweet-alert.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="css/sweet-alert.css">
+</script>
+<body>
+    <div class="header">
 
-            window.location.href = "Member?act=insert";
-        }
-
-        function check() {
-            if (!form.x.value) {
-                alert("Please fill the keyword to search..");
-                return (false);
-            }
-            return (true);
-        }
-    </script>
-    <body>
-        <div class="header">
-
-            <span class="left">
-                Welcome, <%= session.getAttribute("login")%>!
-            </span>
-            <span class="right">
-        <form action="UserLogout" class="logout">
-                    <input type="submit" value="Logout" class="button"/>
-        </form>
-            </span></div>
-        <div class="content">
+        <span class="left">
+            Welcome, <%= session.getAttribute("login")%>!
+        </span>
+        <span class="right">
+            <form action="UserLogout" class="logout">
+                <input type="submit" value="Logout" class="button"/>
+            </form>
+        </span></div>
+    <div class="content">
         <input type="button" class="add" value="Add"onclick="addRecord();">
-      <input type="button" class="search" value="Search"onclick="addRecord();">
-            <table  cellspacing='0'>
+        <input type="button" class="search" value="Search"onclick="addRecord();">
+        <table  cellspacing='0'>
             <thead>
                 <tr>
                     <th>User ID</th>
@@ -52,15 +42,16 @@
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
-                </thead>
-                <%
-                    DecimalFormat df = new DecimalFormat("'Rp.'###,###,###.00");
-                    ArrayList<Member> listMember = (ArrayList<Member>) request.getAttribute("listPerson");
+            </thead>
+            <%
+                DecimalFormat df = new DecimalFormat("'Rp.'###,###,###.00");
+                ArrayList<Member> listMember = (ArrayList<Member>) request.getAttribute("listPerson");
 
-                    for (int i = 0; i < listMember.size(); i++) {
+                for (int i = 0; i < listMember.size(); i++) {
 
-                %>
-                <tbody>
+            %>
+
+            <tbody>
                 <tr>
                     <td><%= listMember.get(i).getUserid()%></td>
                     <td><%= listMember.get(i).getUsername()%></td>
@@ -72,11 +63,12 @@
                     <td><a href="Member?act=edit&no=<%= listMember.get(i).getUserid()%>">Edit</a></td>
                     <td><a href="Member?act=delete&no=<%= listMember.get(i).getUserid()%>">Delete</a></td>
                 </tr>
+
                 <%
                     }
                 %>
-                </tbody>
-            </table>
-        </div>
-    </body>
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>
