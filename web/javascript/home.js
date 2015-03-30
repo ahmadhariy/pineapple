@@ -1,14 +1,13 @@
 function addRecord() {
 
-            window.location.href = "Member?act=insert";
-        }
+    window.location.href = "Member?act=insert";
+}
 
-        function check() {
-            if (!form.x.value) {
-                alert("Please fill the keyword to search..");
-                return (false);
-            }
-            return (true);
-        }
-		
-		
+function search() {
+    var x = document.forms["formSearch"]["searchBy"].value;
+	var y = document.forms["formSearch"]["inputSearch"].value;
+	if(x==="View All"){
+		y==="sadad";
+	}
+}
+

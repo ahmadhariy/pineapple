@@ -65,7 +65,7 @@ public class MemberController extends HttpServlet {
             try {
 
                 String searchBy = request.getParameter("searchBy");
-                String search = request.getParameter("x");
+                String search = request.getParameter("inputSearch");
                 //if (type == null || type.equals("")) {
                 //    String error = "<html><body onload=\"alert('Hello World')\"></body></html>";
                 //    request.setAttribute("err", error);
@@ -73,7 +73,9 @@ public class MemberController extends HttpServlet {
                 //int searchid = Integer.parseInt(search);
 
                 if (search != null) {
-                    if (searchBy.equals("username")) {
+                    if (searchBy.equals("all")) {
+                        request.setAttribute("listPerson", personService.getListAllPerson());
+                    } else if (searchBy.equals("username")) {
                         request.setAttribute("listPerson", personService.getListSearchByUsername(search));
                     } else if (searchBy.equals("firstname")) {
                         request.setAttribute("listPerson", personService.getListSearchByFirstname(search));

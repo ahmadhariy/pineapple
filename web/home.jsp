@@ -5,7 +5,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!aasfasgasgsfasfaf->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Member Maintenance</title>
 </head>
@@ -27,8 +26,21 @@
             </form>
         </span></div>
     <div class="content">
-        <input type="button" class="add" value="Add"onclick="addRecord();">
-        <input type="button" class="search" value="Search"onclick="addRecord();">
+        <form method="post" class="formSearch" id="formSearch" action="Member?act=search">
+            <input type="button" class="add" value="Add"onclick="addRecord();">
+            <input type="hidden" value="search" name="type" id="type"/>
+            <input type="text" name="inputSearch" class="inputSearch" id="inputSearch" value="Search Data By.." 
+                   onfocus="if (this.value == 'Search Data By..') {
+                               this.value = '';
+                           }">
+            <select name="searchBy" class="searchBy" id="searchBy">
+                <option value="all">View All</option>
+                <option value="userid">User ID</option>
+                <option value="username">Username</option>
+                <option value="firstname">Firstname</option>
+            </select>
+            <input type="submit" class="search" value="Search"onclick="search();">
+        </form>
         <table  cellspacing='0'>
             <thead>
                 <tr>
@@ -44,11 +56,13 @@
                 </tr>
             </thead>
             <%
+
                 DecimalFormat df = new DecimalFormat("'Rp.'###,###,###.00");
                 ArrayList<Member> listMember = (ArrayList<Member>) request.getAttribute("listPerson");
 
+                boolean data = false;
                 for (int i = 0; i < listMember.size(); i++) {
-
+                    data = true;
             %>
 
             <tbody>
@@ -62,11 +76,17 @@
                     <td><%= df.format(listMember.get(i).getSalary())%></td>
                     <td><a href="Member?act=edit&no=<%= listMember.get(i).getUserid()%>">Edit</a></td>
                     <td><a href="Member?act=delete&no=<%= listMember.get(i).getUserid()%>">Delete</a></td>
-                </tr>
 
-                <%
-                    }
-                %>
+
+                    <%
+                        }
+                        if (!data) {
+                    %>
+                    <td colspan="9"><center><b>-- No Record --</b></center></td>
+            </tr>
+            <%
+                }
+            %>
             </tbody>
         </table>
     </div>

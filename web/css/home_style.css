@@ -140,12 +140,48 @@ body {
     -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-.content .add{
-	float:left;
+
+.content .search, .content .searchBy {
+	margin-left:5px;
 }
-.content .search{
-	float:right;
+
+.content .inputSearch{
+	margin-left:340px;
+width: 150px;
+    padding: 10px 25px;
+	
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #9d9e9e;
+    text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
 }
+
+.content .searchBy{
+	padding: 10px 0px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #9d9e9e;
+    text-shadow: 1px 1px 0 rgba(256,256,256,1.0);
+
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}
+
 .content .add, .content .search{
     padding: 5px 10px;
     font-family: 'Bree Serif', serif;
@@ -182,7 +218,7 @@ table a:hover {
 
 table{
     width:800px;
-    margin-top:60px;
+    margin-top:25px;
 	font-family:Arial, Helvetica, sans-serif;
 	color:#666;
 	font-size:12px;
