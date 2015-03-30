@@ -73,9 +73,7 @@ public class MemberController extends HttpServlet {
                 //int searchid = Integer.parseInt(search);
 
                 if (search != null) {
-                    if (searchBy.equals("all")) {
-                        request.setAttribute("listPerson", personService.getListAllPerson());
-                    } else if (searchBy.equals("username")) {
+                    if (searchBy.equals("username")) {
                         request.setAttribute("listPerson", personService.getListSearchByUsername(search));
                     } else if (searchBy.equals("firstname")) {
                         request.setAttribute("listPerson", personService.getListSearchByFirstname(search));
@@ -86,8 +84,7 @@ public class MemberController extends HttpServlet {
                     //  request.setAttribute("err", error);
                     // }
                 } else {
-                    String error = "<html><body onload=\"alert('Hello World')\"></body></html>";
-                    request.setAttribute("err", error);
+                    request.setAttribute("listPerson", personService.getListAllPerson());
                 }
 
 

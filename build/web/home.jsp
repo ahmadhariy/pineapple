@@ -34,7 +34,6 @@
                                this.value = '';
                            }">
             <select name="searchBy" class="searchBy" id="searchBy">
-                <option value="all">View All</option>
                 <option value="userid">User ID</option>
                 <option value="username">Username</option>
                 <option value="firstname">Firstname</option>
