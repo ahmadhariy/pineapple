@@ -24,6 +24,14 @@
         <servlet-name>PagginationServlet</servlet-name>
         <servlet-class>com.hariy.pagination.PagginationServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>com.hariy.pagination2.EmployeeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Tes</servlet-name>
+        <servlet-class>com.samsonasik.paging.Tes</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/Home</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>PagginationServlet</servlet-name>
         <url-pattern>/PagginationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/EmployeeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Tes</servlet-name>
+        <url-pattern>/Tes</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
