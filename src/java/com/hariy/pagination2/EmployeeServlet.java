@@ -28,7 +28,7 @@ public class EmployeeServlet extends HttpServlet {
             HttpServletResponse response) 
             throws ServletException, IOException {
         int page = 1;
-        int recordsPerPage = 5;
+        int recordsPerPage = 10;
         if(request.getParameter("page") != null)
             page = Integer.parseInt(request.getParameter("page"));
         EmployeeDAO dao = new EmployeeDAO();

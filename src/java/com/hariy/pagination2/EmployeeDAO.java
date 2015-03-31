@@ -19,7 +19,7 @@ import java.util.List;
 public class EmployeeDAO {
     Connection connection;
     Statement stmt;
-    private int noOfRecords;
+    private int limit;
          
     public EmployeeDAO() { }
      
@@ -34,10 +34,10 @@ public class EmployeeDAO {
      
     public List<Employee> viewAllEmployees(
                 int offset, 
-                int noOfRecords)
+                int limit)
     {
-        String query = "select SQL_CALC_FOUND_ROWS * from paging limit "
-                 + offset + ", " + noOfRecords;
+        String query = "select * from paging order by emp_id limit "
+                 + limit + " offset " + offset;
         List<Employee> list = new ArrayList<Employee>();
         Employee employee = null;
         try {
@@ -54,9 +54,9 @@ public class EmployeeDAO {
             }
             rs.close();
              
-            rs = stmt.executeQuery("SELECT FOUND_ROWS()");
+            rs = stmt.executeQuery("select count(*) from paging");
             if(rs.next())
-                this.noOfRecords = rs.getInt(1);
+                this.limit = rs.getInt(1);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -76,6 +76,6 @@ public class EmployeeDAO {
     }
  
     public int getNoOfRecords() {
-        return noOfRecords;
+        return limit;
     }
 }
